@@ -4,6 +4,7 @@ This repository is opened for 2023-2024 Spring Pattern Recognition techical elec
 ## ASSIGNMENTS 
  ### HOMEWORK 1
 These tasks involve basic image processing techniques like color space transformations, flipping, rotating, and resizing images
+
   Task 1: 
 In this task, you need to perform color transformation on an image using RGB to YIQ and YIQ to RGB conversions with for loops. 
   1. Convert the image from RGB to YIQ using for loops.
