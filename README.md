@@ -10,7 +10,7 @@ In this task, you need to perform color transformation on an image using RGB to 
   1. Convert the image from RGB to YIQ using for loops.
   2. Then, convert the image from YIQ to RGB using for loops.
 
-  Task 2: 
+   Task 2: 
 For image rotations and resizing:
 1. Flip the cat and dog images vertically.
 2. Flip the cat and dog images horizontally.
