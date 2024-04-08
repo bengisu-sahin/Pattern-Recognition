@@ -25,12 +25,16 @@ This homework solution file contains Python code to perform K-nearest neighbors 
 #### Steps:
 
 1. **Download the CIFAR-10 dataset**:
-2. **Convert images to vector format**:
+```
+from keras.datasets import cifar10
+(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+```
+3. **Convert images to vector format**:
    - Convert images to vector format where each image with dimensions 32x32x3 is converted to a 1x3072 vector.
-3. **Custom Similarity Function**:
+4. **Custom Similarity Function**:
    - Write a function that calculates similarity between a test sample and training samples using a custom similarity function. This function should return the class name with the highest similarity among the k nearest neighbors.
 ![image](https://github.com/bengisu-sahin/Pattern-Recognition/assets/71591780/88c10605-3f00-448b-9c40-f6d5407a6013)
-4. **Test Code**:
+5. **Test Code**:
    - Define a test sample (`sample_test`) from `x_test`.
    - Choose the value of `k` (number of nearest neighbors).
    - Use the `knnCustomSimilarity` function to classify the test sample.
@@ -45,3 +49,6 @@ print("Predicted Class Label:", similar_class_name)
 print("Predicted Class Label name corresponding to the main class: ",categories[similar_class_name[0]])
 display_image(sample_test)
 ```
+6. **Output **:
+   Output for test code is like this
+![image](https://github.com/bengisu-sahin/Pattern-Recognition/assets/71591780/8cb3b37c-e176-44bd-b788-09b2b4987644)
