@@ -49,6 +49,6 @@ print("Predicted Class Label:", similar_class_name)
 print("Predicted Class Label name corresponding to the main class: ",categories[similar_class_name[0]])
 display_image(sample_test)
 ```
-6. **Output **:
+5. **Output**:
    Output for test code is like this
 ![image](https://github.com/bengisu-sahin/Pattern-Recognition/assets/71591780/8cb3b37c-e176-44bd-b788-09b2b4987644)
