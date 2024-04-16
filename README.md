@@ -68,4 +68,5 @@ The aim is to analyze the discriminative capability of PCA features for a classi
    -Step1: Read image from test directory
    -Step2: Convert into the test vector format 4096x1. Then, combine n times the test vector. The size will be 4096xn. Then, you have to multiply with eigenvector matrix of nx3. Each test sample is again represented with 4096x3 feature matrix.
    -Step3: Compute sum of absolute distance between train feature matrix and test feature matrix.
-‼️‼️‼️ The label of test sample will be class name of corresponding minimum distance.
+   
+ ‼️‼️‼️ The label of test sample will be class name of corresponding minimum distance.
