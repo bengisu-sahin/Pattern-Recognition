@@ -91,3 +91,33 @@ https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.Sequ
 here N=M/2. Assume that the M=500 and N=250. The M refers to number of descriptors that are extracted from each image. N indicates the reduced dimension of descriptors after feature selection. It means that half of features will be removed after feature selection process is completed. The value of M and N depends on your selection. 
  #### Part 3:Train with SVM 
 You are expected to train and test with SVM classifier. Create confusion matrix and show the accuracy for test samples. https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html 
+
+ ### HOMEWORK 5 : SVM Classification and Feature extraction
+ #### About the Assignment 
+The main aim of the assignment is to learn text classification and statistical feature extraction. Contributions of this lab are; 
+- Ability to analyze the statistical features. 
+- Ability to analyze the training a model on text data. 
+- Understanding idea of text representation with TF*IDF. 
+- Understanding idea of text representation with Information Gain (IG). 
+ #### Part 1:   
+TF: Term Frequencies and IDF: Inverse Document Frequencies You are given the two classes, S and N, with related training data. 
+
+![image](https://github.com/bengisu-sahin/Pattern-Recognition/assets/71591780/9806db12-756a-4f68-be9a-8f57cbd1202d)
+
+Step1. Choose the best two features (words) by using Mutual Information (MI) as shown in Eq. (3).  Hint. You will compute the MI score of each word. Sort the MI in descending order 
+and select the highest two features (words). In probability theory, the MI score of two random variables is a quantity that measures the mutual dependency of them. The MI formula is given in Eq. (2-3) [3]. 
+
+![image](https://github.com/bengisu-sahin/Pattern-Recognition/assets/71591780/f25ba861-7a14-4dcf-bec0-920110b637cf)
+
+ #### Part 2:  
+You are expected to compute the TF*IDF score of selected two features (words). 
+ #### Part 3: 
+Represent the each document with these selected two features, called TF*IDF values of two selected features (words). After Step3, A matrix (5x2) will be formed.   
+ #### Part 4:  
+Calculate the TF*IDF values of selected two features (words) for d6. A vector (1x2) will be formed. 
+ #### Part 5:  
+Calculate the TF*IDF values of selected two features (words) for d7. A vector (1x2) will be formed. 
+ #### Part 6: 
+ Predict the class label of d6  by using the KNN algorithm.. 
+ #### Part 7: 
+ Predict the class label of d7  by using the KNN algorithm.
