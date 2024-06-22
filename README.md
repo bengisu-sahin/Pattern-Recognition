@@ -49,7 +49,7 @@ print("Predicted Class Label:", similar_class_name)
 print("Predicted Class Label name corresponding to the main class: ",categories[similar_class_name[0]])
 display_image(sample_test)
 ```
- ### HOMEWORK 2 : KNN Classification with Custom Similarity
+ ### HOMEWORK 3 : KNN Classification with Custom Similarity
 #### Part 1: 
 In this HW, you are expected to make an experiment with L1-distance classifier on Principal Component Features (PCA) features, explained in class. Recall the previous lab, in like manner, the experiment will be conducted on the real life problem, called a classification problem among multi categories. The experiment is about Caltech-101 datasets, there are 15 classes, and each one contains different number of samples. 
 The aim is to analyze the discriminative capability of PCA features for a classification problem. After extraction PCA features, we will train with L1-distance classifier by oneagainst-all methodology. According to one-against-all methodology, for L1-classifer, it means that the lowestdistance score refers to predicted target class of processed sample. 
@@ -70,3 +70,12 @@ The aim is to analyze the discriminative capability of PCA features for a classi
    -Step3: Compute sum of absolute distance between train feature matrix and test feature matrix.
    
  ‼️‼️‼️ The label of test sample will be class name of corresponding minimum distance.
+
+ ### HOMEWORK 4 : SVM Classification and Feature extraction
+ #### Part 1:
+The task involves conducting an experiment using the SVM (Support Vector Machine) classifier on the Caltech-101 dataset, which contains 15 classes with varying numbers of samples. The goal is to implement the one-against-all methodology to identify 15 different hyperplanes during the training stage, one for each class. In the testing stage, the SVM will project each test sample onto these hyperplanes to determine the class. The class associated with the highest similarity score is considered the best match, indicating the predicted target class for the sample.
+ #### Part 2: Feature Extraction 
+Read images in RGB format. Then convert image to LAB format. An image must be in the 224x224x3  format.  Instead of using the whole image data (224x224x3 size), we  have to extract some meaningful features in image. In this study, we will use HOG features. from skimage.color import rgb2lab https://scikit-image.org/docs/stable/api/skimage.feature.html#skimage.feature.hog You can see that an image will be represented only with ndarray features. The dimension of feature vector per sample is 1xn. It means that training data (1457 samples) will be represented as (1457xn). Let’s call the X matrix as training matrix 
+and y is label vector, which keeps the class name of samples. The size of X matrix is (1457xn) and the size of y vector is (1457x1). You are expected to fill the X matrix with features and y vector with class label per each sample. 
+ #### Part 3: Train with SVM 
+You are expected to train and test with SVM classifier. Create confusion matrix and show the accuracy for test samples. https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html 
