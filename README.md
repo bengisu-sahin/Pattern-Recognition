@@ -74,8 +74,20 @@ The aim is to analyze the discriminative capability of PCA features for a classi
  ### HOMEWORK 4 : SVM Classification and Feature extraction
  #### Part 1:
 The task involves conducting an experiment using the SVM (Support Vector Machine) classifier on the Caltech-101 dataset, which contains 15 classes with varying numbers of samples. The goal is to implement the one-against-all methodology to identify 15 different hyperplanes during the training stage, one for each class. In the testing stage, the SVM will project each test sample onto these hyperplanes to determine the class. The class associated with the highest similarity score is considered the best match, indicating the predicted target class for the sample.
+
+![image](https://github.com/bengisu-sahin/Pattern-Recognition/assets/71591780/4100d0a7-7821-4c84-b08e-0f123eccf20f)
+
  #### Part 2: Feature Extraction 
 Read images in RGB format. Then convert image to LAB format. An image must be in the 224x224x3  format.  Instead of using the whole image data (224x224x3 size), we  have to extract some meaningful features in image. In this study, we will use HOG features. from skimage.color import rgb2lab https://scikit-image.org/docs/stable/api/skimage.feature.html#skimage.feature.hog You can see that an image will be represented only with ndarray features. The dimension of feature vector per sample is 1xn. It means that training data (1457 samples) will be represented as (1457xn). Let’s call the X matrix as training matrix 
 and y is label vector, which keeps the class name of samples. The size of X matrix is (1457xn) and the size of y vector is (1457x1). You are expected to fill the X matrix with features and y vector with class label per each sample. 
  #### Part 3: Train with SVM 
+You are expected to train and test with SVM classifier. Create confusion matrix and show the accuracy for test samples. https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html 
+ ### HOMEWORK 5 : SVM Classification and Feature extraction
+ #### Part 1:  Feature Extraction 
+Read images in RGB format. Then convert image to LAB format. An image must be in the 224x224x3  format.  Instead of using the whole image data (224x224x3 size), we have to extract some meaningful features in image. In this study, we will extract SIFT descriptors for feature extraction. from skimage.color import rgb2lab https://scikit-image.org/docs/stable/api/skimage.feature.html#skimage.feature.SIFT You can see that an image will be represented only with ndarray features. The dimension of feature vector per sample is 1xn. It means that training data (1457 samples) will be represented as (1457xn). Let’s call the X matrix as training matrix and y is label vector, which keeps the class name of samples. The size of X matrix is (1457xn) and the size of y vector is (1457x1). You are expected to fill the X matrix with features and y vector with class label per each sample. 
+ #### Part 2:  Feature Selection 
+The main motivation behind the feature selection is the dimension reduction. It means that we can reduce the feature size by eliminating the redundant ones. After feature selection, we will choose the more meaningful and rich features. You can use any python library for feature selection process. For feature selection we will use SFS method.  You can look the following link. 
+https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SequentialFeatureSelector.html You are expected to reduce the size of feature vector from 1xM to 1xN format. In 
+here N=M/2. Assume that the M=500 and N=250. The M refers to number of descriptors that are extracted from each image. N indicates the reduced dimension of descriptors after feature selection. It means that half of features will be removed after feature selection process is completed. The value of M and N depends on your selection. 
+ #### Part 3:Train with SVM 
 You are expected to train and test with SVM classifier. Create confusion matrix and show the accuracy for test samples. https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html 
