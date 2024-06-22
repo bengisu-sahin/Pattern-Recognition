@@ -109,6 +109,13 @@ and select the highest two features (words). In probability theory, the MI score
 
 ![image](https://github.com/bengisu-sahin/Pattern-Recognition/assets/71591780/f25ba861-7a14-4dcf-bec0-920110b637cf)
 
+In (2) and (3),  
+S and N refer to the spam and normal emails, respectively. 
+P (W=0, C=S): the probability of the word not to be included in S.                   
+P (W=1, C=S): the probability of the word included in S.  
+P (W=0, C=N): the probability of the word not to be included in N.  
+P (W=1, C=N): the probability of the word included in N.  
+
  #### Part 2:  
 You are expected to compute the TF*IDF score of selected two features (words). 
  #### Part 3: 
